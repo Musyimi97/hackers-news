@@ -1,3 +1,4 @@
 {
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "python.pythonPath": "/home/arles/.local/share/virtualenvs/Hacker_news_clone-HyspHELJ/bin/python"
 }
