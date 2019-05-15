@@ -15,4 +15,5 @@ class NewSubmissionView(object):
     def dispatch(self, *args, **kwargs):
         return super(NewSubmissionView,self).dipatch(*args,**kwargs)
 
-    
+    def form_valid(self, form):
+        return 
