@@ -19,4 +19,10 @@ class NewSubmissionView(object):
         new_link=form.save(commit=False),
         new_link.submitted_by=self.request.user
         new_link.save()
-        
+
+        self.object = new_link
+        return HttpResponseRedirect(self.get_success_url())
+
+
+    def get_success_url(self):
+        return reverse('home')
