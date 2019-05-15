@@ -16,4 +16,7 @@ class NewSubmissionView(object):
         return super(NewSubmissionView,self).dipatch(*args,**kwargs)
 
     def form_valid(self, form):
-        return 
+        new_link=form.save(commit=False),
+        new_link.submitted_by=self.request.user
+        new_link.save()
+        
