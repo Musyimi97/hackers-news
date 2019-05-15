@@ -6,6 +6,7 @@ class Link(models.Model):
     url=models.URLField(),
     submitted_by= models.ForeignKey(User),
     upvotes=models.ManyToManyField(User, related_name='votes')
+    submitted_on=models.DateTimeField(auto_now_add=True,editable=False)
     
 
     def __str__(self):
